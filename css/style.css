@@ -1,0 +1,45 @@
+.clase {
+    font-size: 20px;
+  }
+  
+#identificador {
+    margin: 10px;
+  }
+body {
+    background-color: #33423e;
+}
+div {
+    background-color: rgba(203, 232, 236, 0.719);
+    min-width: 300px;
+    max-width: 80%;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+h1 {
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+p {
+    
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20;
+}
+
+.noticia {
+    height: 400px;
+    width: 100%;
+    margin-left: none;
+    margin-right: none;
+}
