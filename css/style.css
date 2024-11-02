@@ -1,45 +1,85 @@
-.clase {
+* {
+    margin:0px;
+    padding: 0px;
+}
+html {
     font-size: 20px;
-  }
-  
-#identificador {
-    margin: 10px;
-  }
+}
 body {
     background-color: #33423e;
 }
 div {
-    background-color: rgba(203, 232, 236, 0.719);
-    min-width: 300px;
-    max-width: 80%;
-    margin-left: 200px;
-    margin-right: 200px;
+    background-color: rgb(231, 173, 46);
+    width: 220vw;
+    font-style: normal;
 }
 
 h1 {
+    background-color: rgb(224, 247, 247);
     color:rgb(0, 0, 0);
     text-align: center;
+    font-size: 2rem;
 }
 
 h2 {
+    background-color: beige;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding-top: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Número de líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5rem; /* Ajusta el tamaño de línea según sea necesario */
+    max-height: 3rem; /* Asegúrate de que sea suficiente para el número de líneas */
 }
 
-p {
-    
+p {    
     color: rgb(0, 0, 0);
     text-align: justify;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 20;
+    font-size: 1em;
+    max-height: 11vh; /* Altura máxima */
+    overflow: clip; /* Oculta el desbordamiento */
+    text-overflow: clip; /* Muestra puntos suspensivos */
+    white-space: normal; /* No permite el salto de línea */
 }
 
 .noticia {
-    height: 400px;
-    width: 100%;
-    margin-left: none;
-    margin-right: none;
+    height: 40vh;
+    width: 40vh;
+}
+
+.contenedor-flex {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: space-around; /* Distribute space around items */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width calculations */
+    overflow: hidden;
+}
+
+.caja {
+    border: 1px solid #23b890;
+    width: 40vh;
+    height: 70vh;
+    margin: 0.625rem;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media(min-width: 93.75rem) {
+        .caja {
+          flex: 20vw;
+        }
+}
+
+@media(max-width: 93.75rem) {
+    .caja {
+      flex: 20vw;
+    }
 }
