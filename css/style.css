@@ -10,7 +10,7 @@ body {
 }
 div {
     background-color: rgb(231, 173, 46);
-    width: 220vw;
+    min-width: 20rem;
     font-style: normal;
 }
 
@@ -24,15 +24,16 @@ h1 {
 h2 {
     background-color: beige;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-top: 10px;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.275rem;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* Número de líneas */
     -webkit-box-orient: vertical;
     overflow: hidden;
     line-height: 1.5rem; /* Ajusta el tamaño de línea según sea necesario */
-    max-height: 3rem; /* Asegúrate de que sea suficiente para el número de líneas */
+    max-height: 4rem; /* Asegúrate de que sea suficiente para el número de líneas */
 }
 
 p {    
@@ -65,7 +66,7 @@ p {
     border: 1px solid #23b890;
     width: 40vh;
     height: 70vh;
-    margin: 0.625rem;
+    margin: 0.313rem;
     padding: 10px;
     text-align: center;
     border: 1px solid #ccc;
