@@ -2,11 +2,10 @@
     margin:0px;
     padding: 0px;
 }
-html {
-    font-size: 16px;
-}
+
 body {
     background-color: #33423e;
+    font-size: 100%;
 }
 div {
     background-color: rgb(231, 173, 46);
@@ -18,10 +17,11 @@ h1 {
     background-color: rgb(224, 247, 247);
     color:rgb(0, 0, 0);
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5em;
 }
 
 h2 {
+    font-size: 1.875em;
     background-color: beige;
     text-align: center;
     margin-top: 0.625rem;
@@ -32,7 +32,7 @@ h2 {
     -webkit-line-clamp: 2; /* Número de líneas */
     -webkit-box-orient: vertical;
     overflow: hidden;
-    line-height: 1.5rem; /* Ajusta el tamaño de línea según sea necesario */
+    line-height: 2rem; /* Ajusta el tamaño de línea según sea necesario */
     max-height: 4rem; /* Asegúrate de que sea suficiente para el número de líneas */
 }
 
@@ -74,14 +74,8 @@ p {
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media(min-width: 93.75rem) {
-        .caja {
-          flex: 20rem;
-        }
-}
-
-@media(max-width: 25rem) {
     .caja {
-      flex: 100%;
+        flex: 20rem;
     }
 }
 
