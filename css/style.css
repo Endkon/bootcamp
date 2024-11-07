@@ -2,29 +2,72 @@
     margin:0px;
     padding: 0px;
 }
-
-body {
-    background-color: #33423e;
-    font-size: 100%;
+.grid-container > *{
+    text-align: center;
 }
-nav{
-    z-index: 10;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding: 0 5%;
-    height: 100px;
-    background-color: #9fc8f1bb;
-}
+.grid-container{
+    display: grid;
+    gap: 20px;
+    grid-template:
+    "header" 200px
+    "navbar" 100px    
+    "main" auto
+    "sidebar"
+    "footer";
 
+    .header{
+        grid-area: header;
+        background-color: #675bf9;
+    }
+    .navbar{
+        grid-area: navbar;
+        background-color: #f034c7;
+        display: flexbox;
+    }
+    .main{
+        grid-area: main;
+        background-color: #67e934;
+        background: #c988c5;
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap; /* Allow items to wrap onto the next line */
+        justify-content: space-around; /* Distribute space around items */
+        padding: 0.625rem;
+        box-sizing: border-box; /* Include padding in width calculations */
+    }
+    .sidebar{
+        grid-area: sidebar;
+        background-color: #ce1c51;
+    }
+    .footer{
+        grid-area: footer;
+        background-color: #858491;
+    }
+    @media (min-width: 768px){
+        grid-template:
+            "header navbar" 50px
+            "header navbar" 50px    
+            "sidebar main" auto
+            "footer footer" 100px/
+            300px auto;
+    }
+    @media (min-width: 992px){
+        grid-template:
+            "header header header" 100px
+            "navbar navbar navbar" auto
+            "main main sidebar" auto
+            "footer footer footer" 100px/
+            300px auto 200px;
+    }
+}
 nav .list{
     float: right;
     padding: 0;
     margin: 0;
-    width: 60%;
+    width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 nav .list li{
@@ -42,35 +85,20 @@ nav .list a{
 nav .list a:hover {
     border-bottom: 4px solid #675bf9;
 }
-div {
-    background-color: rgb(231, 173, 46);
-    min-width: 20rem;
-    font-style: normal;
-}
-
-h1 {
-    background-color: rgb(224, 247, 247);
-    color:rgb(0, 0, 0);
-    text-align: center;
-    font-size: 2.5em;
-}
-
 h2 {
-    font-size: 1.875em;
+    font-size: 1em;
     background-color: beige;
     text-align: center;
     margin-top: 0.625rem;
     margin-bottom: 0.625rem;
     padding-top: 0.625rem;
     padding-bottom: 0.275rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* Número de líneas */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    line-height: 2rem; /* Ajusta el tamaño de línea según sea necesario */
-    max-height: 4rem; /* Asegúrate de que sea suficiente para el número de líneas */
 }
-
+div {
+    background-color: rgb(231, 173, 46);
+    width: 350px;
+    font-style: normal;
+}
 p {    
     color: rgb(0, 0, 0);
     text-align: justify;
@@ -79,40 +107,27 @@ p {
     padding-top: 0.625rem;
     font-size: 1rem;
     max-height: 5.625rem; /* Altura máxima */
+    overflow: clip;
+    text-overflow: clip;
+    white-space: normal;
 }
 
 .noticia {
-    height: 40vh;
-    width: 40vh;
+    height: 300px;
+    width: 300px;
 }
-
-.contenedor-flex {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap onto the next line */
-    justify-content: space-around; /* Distribute space around items */
-    padding: 0.625rem;
-    box-sizing: border-box; /* Include padding in width calculations */
-    overflow: hidden;
-}
-
 .caja {
+    background-color: #e6771c;
     border: 1px solid #23b890;
-    width: 31.25rem;
-    margin: 0.313rem;
-    padding: 0.625rem;
+    width: 370px;
+    margin: 0.636rem;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
+    overflow: clip;
+    white-space: normal;
 }
 
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
-@media(min-width: 93.75rem) {
-    .caja {
-        flex: 20%;
-    }
-}
-
-@media(max-width: 93.75rem) {
-    .caja {
-      flex: 20rem;
-    }
+.publicidad{
+    height: 100%;
+    width: 100%;
 }
