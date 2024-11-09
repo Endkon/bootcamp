@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=devide-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css\style.css">
+	<script src="script/scripthora.js"></script>
 	<title>Notiinformatica</title>
 </head>
 
@@ -86,7 +87,7 @@
 						Qualcomm con Intel 18A, en un momento donde el
 						liderazgo del CEO de Intel está en tela de juicio. ¿Puede retomar la compañía azul el vuelo?</p>
 					<a rel="nofollow"
-						href="https://elchapuzasinformatico.com/2024/10/intel-apple-qualcomm-rechazan-intel-18a/">leer
+						href="noticia-6.html">leer
 						más.</a>
 				</article>
 				<article class="caja">
@@ -211,25 +212,16 @@
 			<nav class="pie">&#169; 2024 Notiinformatica</nav>
 		</footer>
 	</div>
-	<script>
-		function myFunc()  {
-			var now = new Date();
-			var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-			document.getElementById('display-hora').innerHTML = time;
-		}
-		setInterval(myFunc, 1000);
-	</script>
-	<script>
-		//<![CDATA[
-		var date = new Date();
-		var d  = date.getDate();
-		var day = (d < 10) ? '0' + d : d;
-		var m = date.getMonth() + 1;
-		var month = (m < 10) ? '0' + m : m;
-		var yy = date.getYear();
-		var year = (yy < 1000) ? yy + 1900 : yy;
-		document.getElementById('display-fecha').innerHTML = day + "/" + month + "/" + year;
-		//]]>
-	</script>
+<script>
+	var date = new Date();
+	var d  = date.getDate();
+	var day = (d < 10) ? '0' + d : d;
+	var m = date.getMonth() + 1;
+	var month = (m < 10) ? '0' + m : m;
+	var yy = date.getYear();
+	var year = (yy < 1000) ? yy + 1900 : yy;
+	document.getElementById('display-fecha').innerHTML = day + "/" + month + "/" + year;
+	//]]>
+</script>
 </body>
 </html>
