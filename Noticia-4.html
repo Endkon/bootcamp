@@ -11,19 +11,21 @@
 <body>
     <div class="flex-container">
         <header class="header">
-            <div class="title">
-                <h1>Notiinformatica</h1>
-            </div>
-            <div class="menu">
-                <div class="logo">Logo</div>
-                <nav class="nav">
-                    <a href="index.html">Inicio</a>
-                    <a href="contacto.html">Contacto</a>
-                    <a href="about.html">Sobre Nosotros</a>
-                </nav>
-                <div class="social">Social</div>
-            </div>
-        </header>
+			<div class="title">
+				<h1>Notiinformatica</h1>
+			</div>
+			<div class="menu">
+				<div class="logo"><img src="img/ni-logo.png" class="p-logo"></div>
+				<nav class="nav">
+					<a href="index.html">Inicio</a>
+					<a href="contacto.html">Contacto</a>
+					<a href="about.html">Sobre Nosotros</a>
+				</nav>
+				<div id="display-fecha" class="fecha"></div>
+				<div id="display-hora" class="hora"></div>
+			</div>
+			
+		</header>
         <section class="section">
             <div class="articulos">
                 <article class="caja">
@@ -147,6 +149,26 @@
             <nav class="pie">&#169; 2024 Notiinformatica</nav>
         </footer>
     </div>
+    <script>
+		function myFunc()  {
+			var now = new Date();
+			var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+			document.getElementById('display-hora').innerHTML = time;
+		}
+		setInterval(myFunc, 1000);
+	</script>
+	<script>
+		//<![CDATA[
+		var date = new Date();
+		var d  = date.getDate();
+		var day = (d < 10) ? '0' + d : d;
+		var m = date.getMonth() + 1;
+		var month = (m < 10) ? '0' + m : m;
+		var yy = date.getYear();
+		var year = (yy < 1000) ? yy + 1900 : yy;
+		document.getElementById('display-fecha').innerHTML = day + "/" + month + "/" + year;
+		//]]>
+	</script>
 </body>
 
 </html>
